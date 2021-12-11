@@ -1,0 +1,24 @@
+name: Publish static app to github.io
+on:
+  release:
+    types: [created]
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.7'
+      - run: npm ci
+      - run: npm run build
+      - name: Push to tlariviere/tlariviere.github.io
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'build'
+          destination-github-username: 'tlariviere'
+          destination-repository-name: 'tlariviere.github.io'
+          user-email: ${{ secrets.USER_EMAIL }}
+          target-branch: master
