@@ -1,0 +1,17 @@
+{
+  "env": {
+    "browser": true,
+    "node": false
+  },
+  "extends": [
+    "@tlariviere/eslint-config"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "project": "tsconfig.json"
+  }
+}
