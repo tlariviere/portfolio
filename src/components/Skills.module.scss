@@ -1,0 +1,41 @@
+@import "../styles/smallScreens.scss";
+
+.Skills > div {
+  .Category {
+    display: grid;
+    gap: calc(5px + 2%);
+    grid-template-columns: 32px minmax(32px, 64px) auto;
+    margin-bottom: 20px;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: 80px auto;
+
+      p:not(.SubCatLabel, .SubCatLabel + p) {
+        grid-column: span 2;
+      }
+
+      .SubCatLabel {
+        text-decoration: underline;
+
+        &::after {
+          content: " :";
+        }
+      }
+    }
+
+    @include isExtraSmallScreen {
+      grid-template-columns: 32px auto;
+
+      > :last-child {
+        padding-left: 5px;
+        grid-column: span 2;
+      }
+    }
+  }
+}

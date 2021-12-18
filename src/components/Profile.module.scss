@@ -1,0 +1,56 @@
+@import "../styles/smallScreens.scss";
+
+.Profile {
+  padding-left: 10px;
+
+  .Picture {
+    width: 128px;
+    height: 128px;
+    margin: 20px auto 60px auto;
+
+    > img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    @include isMediumScreen {
+      width: 100%;
+    }
+
+    @include isExtraSmallScreen {
+      margin: 20px auto 40px auto;
+    }
+  }
+
+  .Contact > div {
+    display: grid;
+    gap: calc(5px + 2%);
+    grid-template-columns: minmax(18px, 40px) minmax(215px, auto);
+    padding: 0 0 35px 0;
+    border-bottom: 1px solid #e1e0dd;
+
+    @include isNotLargeScreen {
+      border-bottom: 0;
+    }
+
+    > img {
+      width: 100%;        
+    }
+
+    > p:last-child {
+      grid-column: 2;
+    }
+
+    > * {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  @include isMediumScreen {
+    display: grid;
+    gap: calc(10px + 5%);
+    grid-template-columns: minmax(128px, 200px) minmax(240px, 270px);
+  }
+}

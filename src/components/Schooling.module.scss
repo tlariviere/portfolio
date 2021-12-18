@@ -1,0 +1,12 @@
+@import "../containers/CV.module.scss";
+@import "../styles/smallScreens.scss";
+
+.Schooling {
+  @include MainSection(School);
+
+  @include isExtraSmallScreen {
+    > div {
+      grid-template-columns: minmax(64px, 96px) auto;
+    }
+  }
+}

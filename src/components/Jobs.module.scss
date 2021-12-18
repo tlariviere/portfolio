@@ -1,0 +1,40 @@
+@import "../containers/CV.module.scss";
+@import "../styles/smallScreens.scss";
+
+.Jobs {
+  @include MainSection(Job);
+
+  @include isExtraSmallScreen {
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      h3 {
+        margin-top: 0;
+      }
+  
+      > div {
+        padding-top: 0;
+  
+        > img {
+          width: 80%;
+          margin: auto;
+        }
+  
+        &:nth-of-type(odd) {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+  
+      .Job {   
+        padding-left: 0;
+  
+        > p:not(:last-child) {
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

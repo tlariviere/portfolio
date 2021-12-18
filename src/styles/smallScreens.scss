@@ -1,0 +1,19 @@
+@import "constants.scss";
+
+@mixin isNotLargeScreen {
+  @media screen and (max-width: $pageWidth) {
+    @content;
+  }
+}
+
+@mixin isExtraSmallScreen {
+  @media screen and (max-width: $xsScreenWidth) {
+    @content;
+  }
+}
+
+@mixin isMediumScreen {
+  @media screen and (max-width: $pageWidth) and (min-width: $xsScreenWidth) {
+    @content;
+  }
+}
