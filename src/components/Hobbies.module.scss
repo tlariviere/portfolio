@@ -2,14 +2,18 @@
 
 .Hobbies {
   padding-left: 10px;
+  padding-right: 10px;
+  width: calc(100% - 20px);
 
   > div {
     display: flex;
     flex-direction: column;
+    padding-left: 26px;
+    padding-right: 26px;
 
     figure {
       flex: auto;
-      margin: 0 calc(20px + 5%);
+      margin: 0;
       height: 100px;
       width: 100px;
 
@@ -28,20 +32,14 @@
       &:nth-of-type(even) {
         align-self: end;
       }
-
-      @include isNotLargeScreen {
-        margin: 0 15px;
-      }
     }
 
     @include isNotLargeScreen {
       flex-wrap: wrap;
       flex-direction: row;
+      column-gap: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
-  }
-
-  @include isNotLargeScreen {
-    padding-left: 10px;
-    width: calc(100% - 10px);
   }
 }
