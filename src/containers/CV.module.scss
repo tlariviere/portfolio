@@ -1,0 +1,114 @@
+@import "../styles/globals.scss";
+@import "../styles/smallScreens.scss";
+
+@mixin MainSection($blocClassName) {
+  > div {
+    display: grid;
+    grid-template-columns: minmax(64px, 128px) auto;
+
+    > div {
+      padding: 5px 0 10px 0;
+
+      > img {
+        width: 100%;
+      }
+
+      &:not(:nth-last-child(2), :last-child) {
+        border-bottom: 1px solid #e1e0dd;          
+      }
+
+      &:nth-of-type(odd) {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .#{$blocClassName} {
+      padding-left: calc(5px + 2%);
+
+      > p:last-child {
+        color: rgba(0,0,0,0.6);
+      }
+    }
+
+    .#{$blocClassName} > p:last-child  span:not(:first-child)::before {
+      content: "\00B7";
+      margin: 0 5px;
+    }
+  }
+
+  > h2 {
+    @include isExtraSmallScreen {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.CV {
+  background-color: #f3f2ef;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 450;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    font-weight: 350;
+  }
+
+  .Container > div {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 250px auto;
+    grid-template-rows: 410px auto;
+
+    @include isNotLargeScreen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .Container > h1 {
+    @include isNotLargeScreen {
+      margin-left: 15px;
+    }
+  }
+
+  .Main {
+    grid-row: span 2;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+  
+    h3 {
+      font-size: 1.0em;
+      font-weight: 450;
+    }
+
+    > section {
+      border: 1px solid #e1e0dd;   
+      border-radius: 10px;
+      margin: 5px 0;
+      padding: 20px calc(20px + 2%);
+      box-shadow: 0px 0px 5px #ddd;
+      background: white;
+
+      @include isNotLargeScreen {
+        padding: calc(5px + 2%);
+        border-radius: 0;
+      }
+    }
+
+    @include isNotLargeScreen {
+      width: 100%;
+    }
+  }
+}
