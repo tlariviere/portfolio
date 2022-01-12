@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./CV.module.scss";
 import Profile from "../components/Profile";
@@ -29,6 +30,19 @@ const MainBody = () => {
   );
 };
 
+const DownloadCV = () => {
+  return (
+    <Link
+      className={styles.DownloadCV}
+      to="/Thibaud_Lariviere-CV.pdf"
+      target="_blank"
+      download
+    >
+      Télécharger mon CV
+    </Link>
+  );
+};
+
 const CV: React.FC = () => {
   return (
     <article id="cv" className={styles.CV}>
@@ -45,6 +59,7 @@ const CV: React.FC = () => {
             <SoftSkills />
           </div>
         </div>
+        <DownloadCV />
       </div>
     </article>
   );

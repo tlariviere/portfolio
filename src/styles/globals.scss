@@ -30,6 +30,40 @@ a {
   text-decoration: none;
 }
 
+a.Button {
+  font-size: 1.1em;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 2px;
+  border-style: solid;
+  border-width: 1px;
+
+  &.Light {
+    border-color: $grey;
+    color: $darkPurple;
+    background-color: white;
+
+    &:hover {
+      background-color: $darkPurple;
+      border-color: $darkPurple;
+      color: white;
+    }
+  }
+
+  &.Dark {
+    border-color: $darkPurple;
+    color: white;
+    background-color: $darkPurple;
+
+    &:hover {
+      background-color: white;
+      border-color: $grey;
+      color: $darkPurple;
+    }
+  }
+}
+
 h1 {
   font-size: 2.1em;
   font-weight: 600;

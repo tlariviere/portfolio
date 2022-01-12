@@ -54,6 +54,14 @@
         color: white;
       }
     }
+    
+    a.DownloadCV {
+      @extend .Button;
+      @extend .Light;
+      font-size: 1.1em;
+      font-weight: 500;
+      margin-top: 40px;
+    }
 
     > div {
       display: grid;      
