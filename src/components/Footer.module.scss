@@ -1,0 +1,27 @@
+@import "../styles/globals.scss";
+
+.Footer {
+  background-color: $darkPurpleAlt;
+  border-top: 1px solid $grey;
+  color: white;
+
+  .Container {
+    padding: 10px;
+
+    > div {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+
+      .SocialNetwork {
+        color: white;
+        font-size: 1.4em;
+
+        &:hover {
+          color: $lightPurpleAlt;
+        }
+      }
+    }
+  }
+}
