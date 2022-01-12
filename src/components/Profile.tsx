@@ -1,10 +1,18 @@
+import type { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faAt,
+  faMapMarkerAlt,
+  faLaptopHouse,
+  faExternalLinkAlt,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./Profile.module.scss";
 import profil from "../assets/profil.jpeg";
-import address from "../assets/address.svg";
-import phone from "../assets/phone.svg";
-import mail from "../assets/mail.svg";
 
 const Picture = () => {
   return (
@@ -14,26 +22,55 @@ const Picture = () => {
   );
 };
 
+interface SocialNetworkProps {
+  icon: IconProp;
+  href: string;
+  prefix: string;
+  type: string;
+}
+
+const SocialNetwork: React.FC<SocialNetworkProps> = ({
+  icon,
+  href,
+  prefix,
+  type,
+}) => (
+  <>
+    <FontAwesomeIcon icon={icon} fixedWidth />
+    <p>
+      {prefix}{" "}
+      <a href={href} target="_blank" rel="noreferrer">
+        {type} <FontAwesomeIcon icon={faExternalLinkAlt} />
+      </a>
+    </p>
+  </>
+);
+
 const Contact = () => {
   return (
     <div className={styles.Contact}>
-      <h2>Contact</h2>
+      <h3>Contact</h3>
       <div>
-        <img src={address} alt="" />
-        <div>
-          <p>8 rue de Montrognon</p>
-          <p>63540 SAULZET-LE-CHAUD</p>
-        </div>
-        <img src={phone} alt="" />
+        <FontAwesomeIcon icon={faPhone} fixedWidth />
         <p>06 49 81 30 14</p>
-        <img src={mail} alt="" />
+        <FontAwesomeIcon icon={faAt} fixedWidth />
         <p>lariviere.thibaud@gmail.com</p>
-        <p>
-          {new Date(
-            Date.now() - new Date("1993/05/17").getTime()
-          ).getFullYear() - 1970}{" "}
-          ans, permis B
-        </p>
+        <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
+        <p>Région Clermont-Ferrand</p>
+        <SocialNetwork
+          icon={faLinkedin}
+          href="https://www.linkedin.com/in/thibaud-larivi%C3%A8re-0451655b/"
+          prefix="Mon profil"
+          type="linkedin"
+        />
+        <SocialNetwork
+          icon={faGithub}
+          href="https://github.com/tlariviere"
+          prefix="Ma page"
+          type="github"
+        />
+        <FontAwesomeIcon icon={faLaptopHouse} fixedWidth />
+        <p>Télétravail</p>
       </div>
     </div>
   );

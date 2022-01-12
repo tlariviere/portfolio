@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg6050"
+   version="1.1"
+   viewBox="0 0 174.48734 174.4966"
+   height="174.4966mm"
+   width="174.48734mm">
+  <defs
+     id="defs6044" />
+  <metadata
+     id="metadata6047">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-0.44677292,-0.35289638)"
+     id="layer1">
+    <g
+       transform="matrix(0.0925957,0,0,-0.0925957,-1334.3758,1293.6)"
+       id="g114">
+      <path
+         id="path116"
+         style="fill:#44949b;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 16300,13024.3 c 0,-520.3 -421.9,-942.2 -942.2,-942.2 -520.4,0 -942.2,421.9 -942.2,942.2 0,520.4 421.8,942.3 942.2,942.3 520.3,0 942.2,-421.9 942.2,-942.3" />
+    </g>
+    <g
+       transform="matrix(0.08816164,0,0,-0.08816164,-1334.3758,1293.6)"
+       id="g918">
+      <path
+         id="path920"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 16286.8,13204.6 h -314 c -7.4,0 -13.3,5.9 -13.3,13.3 v 159.4 c 0,7.3 5.9,13.3 13.3,13.3 h 314 c 7.3,0 13.2,-6 13.2,-13.3 v -159.4 c 0,-7.4 -5.9,-13.3 -13.2,-13.3" />
+    </g>
+    <g
+       transform="matrix(0.09008427,0,0,-0.09008427,-1334.3758,1293.6)"
+       id="g922">
+      <path
+         id="path924"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 16266.8,12891.9 h -962.6 c -18.4,0 -33.2,14.9 -33.2,33.2 v 17.2 c 0,18.3 14.8,33.2 33.2,33.2 h 962.6 c 18.3,0 33.2,-14.9 33.2,-33.2 v -17.2 c 0,-18.3 -14.9,-33.2 -33.2,-33.2" />
+    </g>
+    <g
+       transform="matrix(0.09046704,0,0,-0.09046704,-1334.3758,1293.6)"
+       id="g926">
+      <path
+         id="path928"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         d="m 16245.4,13159.1 c 0,-37.8 -30.6,-68.4 -68.4,-68.4 h -900.4 c -37.8,0 -68.5,30.6 -68.5,68.4 v 522.2 c 0,37.8 30.7,68.4 68.5,68.4 h 900.4 c 37.8,0 68.4,-30.6 68.4,-68.4 z m 54.6,580.7 c 0,37.8 -30.6,68.4 -68.4,68.4 h -1021.3 c -37.8,0 -68.5,-30.6 -68.5,-68.4 v -631.4 c 0,-37.7 30.7,-68.4 68.5,-68.4 h 1021.3 c 37.8,0 68.4,30.7 68.4,68.4 v 631.4" />
+    </g>
+  </g>
+</svg>
