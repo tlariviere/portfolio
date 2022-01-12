@@ -28,7 +28,7 @@ const School: React.FC<SchoolProps> = ({
         <img src={image} alt="" />
       </div>
       <div className={styles.School}>
-        <h3>{title}</h3>
+        <h4>{title}</h4>
         {specialism && <p>Spécialité {specialism}</p>}
         {description && <p>{description}</p>}
         <p>{location}</p>
@@ -41,7 +41,7 @@ const School: React.FC<SchoolProps> = ({
 const Schooling: React.FC = () => {
   return (
     <section className={styles.Schooling}>
-      <h2>Formation</h2>
+      <h3>Formation</h3>
       <div>
         <School
           image={enseirb}

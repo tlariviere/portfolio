@@ -43,9 +43,7 @@ const Job: React.FC<JobProps> = ({
         <img src={image} alt={alt} />
       </div>
       <div className={styles.Job}>
-        <h3>{title}</h3>
-        <p>{skills.join(", ")}.</p>
-        <p>{children}</p>
+        <h4>{title}</h4>
         <p>
           <span>{location}</span>
           <span>
@@ -59,6 +57,8 @@ const Job: React.FC<JobProps> = ({
             {`${durationMonths} mois`}
           </span>
         </p>
+        <p className={styles.Skills}>{skills.join(", ")}.</p>
+        <p>{children}</p>
       </div>
     </>
   );
@@ -67,21 +67,21 @@ const Job: React.FC<JobProps> = ({
 const Jobs: React.FC = () => {
   return (
     <section className={styles.Jobs}>
-      <h2>Expériences professionnelles</h2>
+      <h3>Expériences professionnelles</h3>
       <div>
         <Job
           image={effidence}
           alt="effidence"
-          title="Ingénieur de développement"
+          title="Développeur polyvalent"
           skills={[
-            "C++17",
-            "Rust",
             "Js ES6",
-            "Stm32",
-            "Qt5/QML",
             "Node.js",
             "Express",
             "AngularJS",
+            "C++17",
+            "Rust",
+            "Stm32",
+            "Qt5/QML",
             "Gitlab",
           ]}
           location="Clermont-Ferrand"
@@ -93,8 +93,8 @@ const Jobs: React.FC = () => {
         <Job
           image={mentorGraphics}
           alt="mentor-graphics"
-          title="Ingénieur de développement"
-          skills={["C++11", "Git", "JIRA", "Simulation numérique"]}
+          title="Développeur simulation numérique"
+          skills={["C++11", "Git", "JIRA"]}
           location="Grenoble"
           dateStart={new Date(2018, 4)}
           dateEnd={new Date(2019, 9)}

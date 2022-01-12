@@ -4,6 +4,19 @@
 .Jobs {
   @include MainSection(Job);
 
+  .Job > p:first-of-type {
+    color: rgba(0,0,0,0.6);
+
+    span:not(:first-child)::before {
+      content: "\00B7";
+      margin: 0 5px;
+    }
+  }
+
+  .Skills {
+    font-weight: 500;
+  }
+
   @include isExtraSmallScreen {
     > div {
       display: flex;
@@ -30,8 +43,9 @@
   
       .Job {   
         padding-left: 0;
+        padding-bottom: 35px;
   
-        > p:not(:last-child) {
+        > p:not(:first-of-type) {
           text-align: justify;
         }
       }

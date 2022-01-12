@@ -1,10 +1,11 @@
 @import "../styles/globals.scss";
 @import "../styles/smallScreens.scss";
+@import "../styles/constants.scss";
 
 @mixin MainSection($blocClassName) {
   > div {
     display: grid;
-    grid-template-columns: minmax(64px, 128px) auto;
+    grid-template-columns: 64px auto;
 
     > div {
       padding: 5px 0 10px 0;
@@ -25,15 +26,6 @@
 
     .#{$blocClassName} {
       padding-left: calc(5px + 2%);
-
-      > p:last-child {
-        color: rgba(0,0,0,0.6);
-      }
-    }
-
-    .#{$blocClassName} > p:last-child  span:not(:first-child)::before {
-      content: "\00B7";
-      margin: 0 5px;
     }
   }
 
@@ -45,69 +37,158 @@
 }
 
 .CV {
-  background-color: #f3f2ef;
+  padding: 70px 0 80px 0;
+  font-size: 1.05em;
 
-  h1 {
-    text-transform: uppercase;
-    font-size: 1.8em;
-    font-weight: 450;
-    margin: 0;
-  }
+  .Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    > h1 {
+      align-self: flex-start;
 
-  h2 {
-    font-size: 1.3em;
-    font-weight: 350;
-  }
+      @include isNotLargeScreen {
+        align-self: center;
+        margin: 0;
+        color: white;
+      }
+    }
 
-  .Container > div {
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 250px auto;
-    grid-template-rows: 410px auto;
+    > div {
+      display: grid;      
+      grid-template-columns: 300px auto;
+      grid-template-rows: 220px 325px max-content;
+      grid-template-areas:
+        "profile mainTitle"
+        "profile mainBody"
+        "sidePane mainBody";
+      box-shadow: 0px 10px 50px #ccc;
+      margin-top: 20px;
+      width: 100%;
 
-    @include isNotLargeScreen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      h1, h2 {
+        margin: 10px 0;
+      }
+    
+      h1 {
+        font-size: 2.6em;
+      }
+    
+      h1, h3 {
+        text-transform: uppercase;
+      }
+    
+      h2 {
+        font-size: 1.8em;
+        font-weight: 360;
+        font-family: 'Roboto Mono', monospace;
+        margin-bottom: 0;
+      }
+    
+      h4 {
+        font-weight: 600;
+      }
+      
+      ul {
+        list-style: square;
+        padding-left: 31px;
+    
+        li {
+            font-size: 0.9em;
+            line-height: 26px;
+            padding-left: 7px;
+        }
+      }
+
+      @include isNotLargeScreen {
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+      }
     }
   }
+  
+  .SidePane {
+    background-color: $darkPurple;
+    color: white;
+    padding: 30px 0;
+    grid-area: sidePane;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  
+    h3 {
+      margin-top: 0;
+    }
 
-  .Container > h1 {
+    > section {
+      padding: 0 30px;
+    }
+
+    &:nth-child(2) {
+      grid-area: profile;
+    }
+
     @include isNotLargeScreen {
-      margin-left: 15px;
+      &:nth-child(2) {
+        grid-area: profile;
+      }
     }
   }
 
   .Main {
-    grid-row: span 2;
-
-    h1 {
-      width: 100%;
-      text-align: center;
-      font-size: 1.5em;
-      margin: 10px 0;
-    }
-  
-    h3 {
-      font-size: 1.0em;
-      font-weight: 450;
-    }
+    background-color: $darkPurple;
 
     > section {
-      border: 1px solid #e1e0dd;   
-      border-radius: 10px;
-      margin: 5px 0;
-      padding: 20px calc(20px + 2%);
-      box-shadow: 0px 0px 5px #ddd;
-      background: white;
+      margin: 0;
+      padding: 30px 0;
+      background-color: white;
 
-      @include isNotLargeScreen {
-        padding: calc(5px + 2%);
-        border-radius: 0;
+      > * {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+  
+      h3 {
+        font-size: 1.1em;
+        font-weight: 500;
+        background-color: $grey;
+        color: white;
+        padding: 6px 30px 6px 50px;
+        position: relative;
+        right: 20px;
+
+        @include isNotLargeScreen {
+          right: 0;
+          padding-left: 30px;
+        }
       }
     }
+  }
 
-    @include isNotLargeScreen {
+  .MainTitle {
+    @extend .Main;
+    padding-top: 50px;
+    grid-area: mainTitle;
+
+    > section {
+      height: 110px;
+
+      @include isNotLargeScreen {
+        height: unset;
+      }
+    }
+  }
+
+  .MainBody {
+    @extend .Main;
+    grid-area: mainBody;
+    padding-bottom: 50px;
+  }
+
+  @include isNotLargeScreen {
+    .Main, .SidePane {
       width: 100%;
     }
   }

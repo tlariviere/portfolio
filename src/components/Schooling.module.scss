@@ -4,8 +4,14 @@
 .Schooling {
   @include MainSection(School);
 
-  @include isExtraSmallScreen {
-    > div {
+  > div {
+    padding-bottom: 30px;
+
+    .School > p:last-of-type {
+      color: rgba(0,0,0,0.6);
+    }
+  
+    @include isExtraSmallScreen {
       grid-template-columns: minmax(64px, 96px) auto;
     }
   }
