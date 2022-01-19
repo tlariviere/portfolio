@@ -59,7 +59,7 @@ const Contact = () => {
         <p>Région Clermont-Ferrand</p>
         <SocialNetwork
           icon={faLinkedin}
-          href="https://www.linkedin.com/in/thibaud-larivi%C3%A8re-0451655b/"
+          href="https://www.linkedin.com/in/thibaud-lariviere/"
           prefix="Mon profil"
           type="linkedin"
         />

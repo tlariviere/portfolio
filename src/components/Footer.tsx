@@ -28,7 +28,7 @@ const Footer: React.FC = () => (
       <div>
         <SocialNetwork
           icon={faLinkedin}
-          href="https://www.linkedin.com/in/thibaud-larivi%C3%A8re-0451655b/"
+          href="https://www.linkedin.com/in/thibaud-lariviere/"
         />
         <SocialNetwork icon={faGithub} href="https://github.com/tlariviere" />
         <p>&copy; {new Date().getFullYear()} Thibaud Larivière</p>
