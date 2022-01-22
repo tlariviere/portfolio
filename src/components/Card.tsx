@@ -29,16 +29,8 @@ const Card: React.FC<CardProps> = ({
         <h2>{title}</h2>
         <p>{children}</p>
         <div>
-          {demoUrl && (
-            <a className={`${styles.Button} ${styles.Dark}`} href={demoUrl}>
-              Démo Live
-            </a>
-          )}
-          {repoUrl && (
-            <a className={`${styles.Button} ${styles.Dark}`} href={repoUrl}>
-              Dépôt github
-            </a>
-          )}
+          {demoUrl && <a href={demoUrl}>Démo Live</a>}
+          {repoUrl && <a href={repoUrl}>Dépôt github</a>}
         </div>
       </div>
     </section>

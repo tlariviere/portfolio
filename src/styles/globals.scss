@@ -51,6 +51,17 @@ a.Button {
     }
   }
 
+  &.LightAlt {
+    border-color: $darkPurple;
+    color: $darkPurple;
+    background-color: white;
+
+    &:hover {
+      border-color: $grey;
+      background-color: $lightPurpleAlt;
+    }
+  }
+
   &.Dark {
     border-color: $darkPurple;
     color: white;

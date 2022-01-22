@@ -3,7 +3,7 @@ import React from "react";
 import Card from "../components/Card";
 import styles from "./Portfolio.module.scss";
 import loginApp from "../assets/login-app.png";
-import underConstruction from "../assets/under-construction.png";
+import omdbApp from "../assets/omdb-app.png";
 
 const LoginApp = () => (
   <Card
@@ -17,10 +17,15 @@ const LoginApp = () => (
   </Card>
 );
 
-const DatingApp = () => (
-  <Card image={underConstruction} title="Bientôt : Dating App">
-    Une application de rencontre réalisée en React. En construction pour le
-    moment.
+const OmdbApp = () => (
+  <Card
+    image={omdbApp}
+    title="OMDb App"
+    demoUrl="https://tlariviere-omdb-app.herokuapp.com"
+    repoUrl="https://github.com/tlariviere/omdb-app"
+  >
+    Une application de recherche de films et séries réalisée en React. Les
+    données renvoyées par l&apos;API OMDb sont mise en cache côté serveur.
   </Card>
 );
 
@@ -31,7 +36,7 @@ const Portfolio: React.FC = () => {
         <h1>Mes projets</h1>
         <div>
           <LoginApp />
-          <DatingApp />
+          <OmdbApp />
         </div>
       </div>
     </article>

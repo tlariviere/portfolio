@@ -36,11 +36,11 @@
     > div {
       background-color: $lightPurple;
       color: black;
-    }
 
-    > .DemoButton {
-      @extend .Button;
-      @extend .Dark;
+      a {
+        @extend .Button;
+        @extend .Dark;
+      }
     }
   }
 
@@ -48,11 +48,11 @@
     > div {
       background-color: $darkPurple;
       color: white;
-    }
 
-    > .DemoButton {
-      @extend .Button;
-      @extend .Light;
+      a {
+        @extend .Button;
+        @extend .LightAlt;
+      }
     }
   }
 }
