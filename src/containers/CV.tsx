@@ -47,19 +47,22 @@ const CV: React.FC = () => {
   return (
     <article id="cv" className={styles.CV}>
       <div className={styles.Container}>
-        <h1>&Agrave; propos</h1>
+        <DownloadCV />
+
         <div>
           <MainTitle />
+
           <div className={styles.SidePane}>
             <Profile />
           </div>
+
           <MainBody />
+
           <div className={styles.SidePane}>
             <Languages />
             <SoftSkills />
           </div>
         </div>
-        <DownloadCV />
       </div>
     </article>
   );

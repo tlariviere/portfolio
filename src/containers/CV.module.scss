@@ -15,7 +15,7 @@
       }
 
       &:not(:nth-last-child(2), :last-child) {
-        border-bottom: 1px solid #e1e0dd;          
+        border-bottom: 1px solid #e1e0dd;
       }
 
       &:nth-of-type(odd) {
@@ -36,15 +36,25 @@
   }
 }
 
+.WithShadow {
+  box-shadow: 0px 10px 50px rgba(34, 34, 34, 0.5);
+}
+
 .CV {
   padding: 70px 0 80px 0;
+  min-height: 100vh;
+  background-image: url("../assets/bg-purple.jpg");
+  background-attachment: fixed;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-size: 1.05em;
 
   .Container {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
     > h1 {
       align-self: flex-start;
 
@@ -54,58 +64,64 @@
         color: white;
       }
     }
-    
+
     a.DownloadCV {
       @extend .Button;
       @extend .Light;
+      @extend .WithShadow;
       font-size: 1.1em;
       font-weight: 500;
-      margin-top: 40px;
+      margin-bottom: 40px;
+      border-radius: 16px;
+      padding: 16px 32px;
+      border-width: 0;
     }
 
     > div {
-      display: grid;      
+      @extend .WithShadow;
+      display: grid;
       grid-template-columns: 300px auto;
       grid-template-rows: 220px 325px max-content;
       grid-template-areas:
         "profile mainTitle"
         "profile mainBody"
         "sidePane mainBody";
-      box-shadow: 0px 10px 50px #ccc;
       margin-top: 20px;
       width: 100%;
 
-      h1, h2 {
+      h1,
+      h2 {
         margin: 10px 0;
       }
-    
+
       h1 {
         font-size: 2.6em;
       }
-    
-      h1, h3 {
+
+      h1,
+      h3 {
         text-transform: uppercase;
       }
-    
+
       h2 {
         font-size: 1.8em;
         font-weight: 360;
-        font-family: 'Roboto Mono', monospace;
+        font-family: "Roboto Mono", monospace;
         margin-bottom: 0;
       }
-    
+
       h4 {
         font-weight: 600;
       }
-      
+
       ul {
         list-style: square;
         padding-left: 31px;
-    
+
         li {
-            font-size: 0.9em;
-            line-height: 26px;
-            padding-left: 7px;
+          font-size: 0.9em;
+          line-height: 26px;
+          padding-left: 7px;
         }
       }
 
@@ -116,7 +132,7 @@
       }
     }
   }
-  
+
   .SidePane {
     background-color: $darkPurple;
     color: white;
@@ -125,7 +141,7 @@
     display: flex;
     gap: 30px;
     flex-direction: column;
-  
+
     h3 {
       margin-top: 0;
     }
@@ -135,17 +151,29 @@
     }
 
     &:nth-child(2) {
+      border-top-left-radius: 16px;
       grid-area: profile;
+    }
+
+    &:nth-child(4) {
+      border-bottom-left-radius: 16px;
     }
 
     @include isNotLargeScreen {
       &:nth-child(2) {
+        border-top-left-radius: 0;
         grid-area: profile;
+      }
+
+      &:nth-child(4) {
+        border-bottom-left-radius: 0;
       }
     }
   }
 
   .Main {
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
     background-color: $darkPurple;
 
     > section {
@@ -157,7 +185,7 @@
         padding-left: 30px;
         padding-right: 30px;
       }
-  
+
       h3 {
         font-size: 1.1em;
         font-weight: 500;
@@ -166,12 +194,18 @@
         padding: 6px 30px 6px 50px;
         position: relative;
         right: 20px;
+        border-radius: 4px;
 
         @include isNotLargeScreen {
           right: 0;
           padding-left: 30px;
         }
       }
+    }
+
+    @include isNotLargeScreen {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
     }
   }
 
@@ -181,6 +215,7 @@
     grid-area: mainTitle;
 
     > section {
+      border-top-left-radius: 8px;
       height: 110px;
 
       @include isNotLargeScreen {
@@ -193,10 +228,15 @@
     @extend .Main;
     grid-area: mainBody;
     padding-bottom: 50px;
+
+    > section:last-child {
+      border-bottom-left-radius: 8px;
+    }
   }
 
   @include isNotLargeScreen {
-    .Main, .SidePane {
+    .Main,
+    .SidePane {
       width: 100%;
     }
   }
