@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./Jobs.module.scss";
 import effidence from "../assets/effidence.jpeg";
 import mentorGraphics from "../assets/mentor-graphics.svg";
-import atmosky from "../assets/atmosky.png";
 import agroleague from "../assets/agroleague.jpeg";
 
 interface JobProps {
