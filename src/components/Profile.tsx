@@ -25,22 +25,15 @@ const Picture = () => {
 interface SocialNetworkProps {
   icon: IconProp;
   href: string;
-  prefix: string;
-  type: string;
+  label: string;
 }
 
-const SocialNetwork: React.FC<SocialNetworkProps> = ({
-  icon,
-  href,
-  prefix,
-  type,
-}) => (
+const SocialNetwork: React.FC<SocialNetworkProps> = ({ icon, href, label }) => (
   <>
     <FontAwesomeIcon icon={icon} fixedWidth />
     <p>
-      {prefix}{" "}
       <a href={href} target="_blank" rel="noreferrer">
-        {type} <FontAwesomeIcon icon={faExternalLinkAlt} />
+        {label} <FontAwesomeIcon icon={faExternalLinkAlt} />
       </a>
     </p>
   </>
@@ -58,14 +51,12 @@ const Contact = () => {
         <SocialNetwork
           icon={faLinkedin}
           href="https://www.linkedin.com/in/thibaud-lariviere/"
-          prefix="Mon profil"
-          type="linkedin"
+          label="Mon profil linkedin"
         />
         <SocialNetwork
           icon={faGithub}
           href="https://github.com/tlariviere"
-          prefix="Ma page"
-          type="github"
+          label="Ma page github"
         />
         <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
         <p>Région Blois</p>
