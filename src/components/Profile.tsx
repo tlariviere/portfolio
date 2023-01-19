@@ -55,8 +55,6 @@ const Contact = () => {
         <p>06 49 81 30 14</p>
         <FontAwesomeIcon icon={faAt} fixedWidth />
         <p>lariviere.thibaud@gmail.com</p>
-        <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
-        <p>Région Clermont-Ferrand</p>
         <SocialNetwork
           icon={faLinkedin}
           href="https://www.linkedin.com/in/thibaud-lariviere/"
@@ -69,6 +67,8 @@ const Contact = () => {
           prefix="Ma page"
           type="github"
         />
+        <FontAwesomeIcon icon={faMapMarkerAlt} fixedWidth />
+        <p>Région Blois</p>
         <FontAwesomeIcon icon={faLaptopHouse} fixedWidth />
         <p>Télétravail</p>
       </div>

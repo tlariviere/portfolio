@@ -4,6 +4,7 @@ import styles from "./Jobs.module.scss";
 import effidence from "../assets/effidence.jpeg";
 import mentorGraphics from "../assets/mentor-graphics.svg";
 import atmosky from "../assets/atmosky.png";
+import agroleague from "../assets/agroleague.jpeg";
 
 interface JobProps {
   image: string;
@@ -70,6 +71,29 @@ const Jobs: React.FC = () => {
       <h3>Expériences professionnelles</h3>
       <div>
         <Job
+          image={agroleague}
+          alt="agroleague"
+          title="Développeur fullstack"
+          skills={[
+            "React Native",
+            "React",
+            "GraphQL",
+            "Apollo",
+            "Node.js",
+            "Typescript",
+            "Prisma",
+            "PostgreSQL",
+            "Docker",
+            "Heroku",
+            "Github",
+          ]}
+          location="Paris (full-remote)"
+          dateStart={new Date(2022, 5)}
+        >
+          Développement mobile, web et back-end pour le conseil en agronomie.
+        </Job>
+
+        <Job
           image={effidence}
           alt="effidence"
           title="Développeur polyvalent"
@@ -86,35 +110,22 @@ const Jobs: React.FC = () => {
           ]}
           location="Clermont-Ferrand"
           dateStart={new Date(2019, 10)}
+          dateEnd={new Date(2022, 4)}
         >
-          Développements front &amp; back end pour robots de transport en
-          logistique ou industries.
+          Développement web, logiciel et embarqué pour robots de transport en
+          logistique.
         </Job>
+
         <Job
           image={mentorGraphics}
           alt="mentor-graphics"
           title="Développeur simulation numérique"
-          skills={["C++11", "Git", "JIRA"]}
+          skills={["C++11", "Git"]}
           location="Grenoble"
           dateStart={new Date(2018, 4)}
           dateEnd={new Date(2019, 9)}
         >
           Développement d&apos;un simulateur de circuits éléctroniques.
-        </Job>
-        <Job
-          image={atmosky}
-          alt="atmosky"
-          title="Stage de fin d'études"
-          skills={[
-            "C++",
-            "Réseau de neurones artificiels",
-            "Code de calcul météorologique (WRF)",
-          ]}
-          location="Bordeaux"
-          dateStart={new Date(2018, 2)}
-          dateEnd={new Date(2018, 7)}
-        >
-          Prévision de la production d&apos;un parc photovoltaïque.
         </Job>
       </div>
     </section>

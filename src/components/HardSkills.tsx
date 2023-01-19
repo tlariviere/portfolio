@@ -45,40 +45,40 @@ const HardSkills: React.FC = () => {
           <h4>Web</h4>
           <div>
             <Skill color={Color.Blue} size={Size.Large}>
+              React Native
+            </Skill>
+            <Skill color={Color.Red} size={Size.Large}>
               React
             </Skill>
-            <Skill color={Color.Red} size={Size.Small}>
+            <Skill color={Color.Cyan} size={Size.Small}>
               Node.js
             </Skill>
-            <Skill color={Color.Cyan} size={Size.Large}>
-              Express
-            </Skill>
             <Skill color={Color.Orange} size={Size.Medium}>
-              MongoDB
+              Apollo
             </Skill>
             <Skill color={Color.Purple} size={Size.Small}>
-              MySQL
+              MongoDB
             </Skill>
             <Skill color={Color.Orange} size={Size.Small}>
-              Javascript ESNext
+              PostgreSQL
             </Skill>
-            <Skill color={Color.Blue} size={Size.Medium}>
+            <Skill color={Color.Blue} size={Size.Small}>
+              Express
+            </Skill>
+            <Skill color={Color.Red} size={Size.Large}>
               Typescript
             </Skill>
-            <Skill color={Color.Red} size={Size.Large}>
+            <Skill color={Color.Cyan} size={Size.Small}>
               SCSS
             </Skill>
-            <Skill color={Color.Cyan} size={Size.Medium}>
-              Bootstrap
-            </Skill>
             <Skill color={Color.Red} size={Size.Large}>
-              Jest
+              GraphQL
             </Skill>
-            <Skill color={Color.Purple} size={Size.Medium}>
+            <Skill color={Color.Purple} size={Size.Small}>
               Webpack
             </Skill>
             <Skill color={Color.Orange} size={Size.Small}>
-              React-Redux
+              Bootstrap
             </Skill>
           </div>
         </div>
@@ -87,10 +87,10 @@ const HardSkills: React.FC = () => {
           <h4>Logiciel</h4>
           <div>
             <Skill color={Color.Purple} size={Size.Large}>
-              C++17
+              Rust
             </Skill>
             <Skill color={Color.Blue} size={Size.Medium}>
-              Rust
+              C++17
             </Skill>
             <Skill color={Color.Orange} size={Size.Medium}>
               Qt5
@@ -110,14 +110,14 @@ const HardSkills: React.FC = () => {
             <Skill color={Color.Red} size={Size.Large}>
               Git
             </Skill>
-            <Skill color={Color.Purple} size={Size.Medium}>
-              GitLab
+            <Skill color={Color.Purple} size={Size.Small}>
+              Jest
             </Skill>
             <Skill color={Color.Cyan} size={Size.Medium}>
-              GitHub
+              Detox
             </Skill>
             <Skill color={Color.Orange} size={Size.Small}>
-              JIRA
+              Playwright
             </Skill>
           </div>
         </div>
