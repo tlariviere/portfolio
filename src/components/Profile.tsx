@@ -44,8 +44,6 @@ const Contact = () => {
     <div className={styles.Contact}>
       <h3>Contact</h3>
       <div>
-        <FontAwesomeIcon icon={faPhone} fixedWidth />
-        <p>06 49 81 30 14</p>
         <FontAwesomeIcon icon={faAt} fixedWidth />
         <p>lariviere.thibaud@gmail.com</p>
         <SocialNetwork
